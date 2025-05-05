@@ -13,4 +13,9 @@
 
 .PublicNav_PN_Dropdown__J9aDL .ant-dropdown-menu {
     margin: 0;
+    list-style: none;
+}
+
+.PublicNav_PN_Dropdown__J9aDL .ant-dropdown-menu li:before {
+    display: none;
 }
