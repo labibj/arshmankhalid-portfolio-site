@@ -48,13 +48,20 @@
               </div>
             </div>
             <div class="ant-typography css-12pc5p4">
-              <div class="ant-flex css-12pc5p4 ant-flex-align-center ant-flex-justify-end" style="gap: 12px;">
-                <button type="button" class="ant-btn css-12pc5p4 ant-btn-default ant-btn-color-default ant-btn-variant-outlined btn-dark"><span>Prompts</span></button>
-                <div class="ant-dropdown-trigger PublicNav_PN_Avatar_Container__EMW00 ant-flex css-12pc5p4 ant-flex-align-center ant-flex-justify-center">
+              <div class="ant-flex css-12pc5p4 ant-flex-align-center ant-flex-justify-end" style="gap: 12px; position: relative;">
+                <div id="menu-toggle" class="ant-dropdown-trigger PublicNav_PN_Avatar_Container__EMW00 ant-flex css-12pc5p4 ant-flex-align-center ant-flex-justify-center">
                   <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" color="#fff" height="24" width="24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 255, 255);">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z" fill="currentColor"></path>
                   </svg>
                 </div>
+                <!-- Dropdwown Menu -->
+                <div  id="mobile-menu" class="dropdown-menu ant-dropdown ant-dropdown-hidden PublicNav_PN_Dropdown__J9aDL css-12pc5p4 ant-dropdown-placement-bottomRight">
+                  <ul class="ant-dropdown-menu ant-dropdown-menu-root ant-dropdown-menu-vertical ant-dropdown-menu-light css-12pc5p4" role="menu" tabindex="0" data-menu-list="true">
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" aria-describedby=":r5:" data-menu-id="rc-menu-uuid-85468-1-2"><span class="ant-dropdown-menu-title-content"><a href="prompts.html"><button type="button" class="ant-btn css-12pc5p4 ant-btn-default ant-btn-color-default ant-btn-variant-outlined ant-btn-block btn-dark"><span>Prompts</span></button></a></span></li>
+                  </ul>
+                  <div aria-hidden="true" style="display: none;"></div>
+                </div>
+                <!-- /Dropdown Menu -->
               </div>
             </div>
           </div>
@@ -543,27 +550,7 @@
           </div>
         </div>
       </main>
-    </div>
-    <div>
-      <div class="ant-dropdown ant-dropdown-hidden PublicNav_PN_Dropdown__J9aDL css-12pc5p4 ant-dropdown-placement-bottomRight">
-        <ul class="ant-dropdown-menu ant-dropdown-menu-root ant-dropdown-menu-vertical ant-dropdown-menu-light css-12pc5p4" role="menu" tabindex="0" data-menu-list="true">
-          <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" aria-describedby=":r1:" data-menu-id="rc-menu-uuid-85468-1-0">
-            <span class="ant-dropdown-menu-title-content">
-              <div class="ant-typography css-12pc5p4">Login</div>
-            </span>
-          </li>
-          <li role="separator" class="ant-dropdown-menu-item-divider"></li>
-          <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" aria-describedby=":r3:" data-menu-id="rc-menu-uuid-85468-1-1">
-            <span class="ant-dropdown-menu-title-content">
-              <div class="ant-typography css-12pc5p4">Sign Up</div>
-            </span>
-          </li>
-          <li role="separator" class="ant-dropdown-menu-item-divider"></li>
-          <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" aria-describedby=":r5:" data-menu-id="rc-menu-uuid-85468-1-2"><span class="ant-dropdown-menu-title-content"><a href="/signup"><button type="button" class="ant-btn css-12pc5p4 ant-btn-default ant-btn-color-default ant-btn-variant-outlined ant-btn-block btn-dark"><span>Join as Expert</span></button></a></span></li>
-        </ul>
-        <div aria-hidden="true" style="display: none;"></div>
-      </div>
-    </div>
+    </div>    
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -610,6 +597,18 @@
           spaceBetween: 30,
         },
       },
+    });
+
+    const toggleBtn = document.getElementById("menu-toggle");
+    const dropdownMenu = document.getElementById("mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      // Toggle between show/hide
+      if (dropdownMenu.style.display === "flex") {
+        dropdownMenu.style.display = "none";
+      } else {
+        dropdownMenu.style.display = "flex";
+      }
     });
   </script>
   </body>

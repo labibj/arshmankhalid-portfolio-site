@@ -63,3 +63,29 @@
         background-color: rgb(163, 22, 87);
     }
 }
+
+/* Default hidden menu */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;    
+    position: absolute;
+    top: 100%; /* Adjust based on header height */
+    right: 10px;
+    padding: 10px;    
+
+    padding: 4px;
+    list-style-type: none;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Show on mobile */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+      position: relative;
+    }
+  }
