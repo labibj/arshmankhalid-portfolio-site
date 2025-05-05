@@ -91,3 +91,12 @@
       position: relative;
     }
   }
+
+  .pp-testimonials .pp-review-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pp-testimonials .pp-review-container .card-review {
+    width: 100%;
+  }
