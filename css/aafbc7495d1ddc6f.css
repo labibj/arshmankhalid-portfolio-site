@@ -107,3 +107,9 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .public-profile-v2 .highlights-container {
+        padding: 0 20px;
+    }
+}
