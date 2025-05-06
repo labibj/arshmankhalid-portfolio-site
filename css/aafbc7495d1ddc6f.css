@@ -101,3 +101,9 @@
   .pp-testimonials .pp-review-container .card-review {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .pp-testimonials .pp-review-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
