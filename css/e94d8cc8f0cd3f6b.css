@@ -5,8 +5,7 @@
         flex-direction: column;
     }
     :where(.css-12pc5p4).ant-row {
-        display: flex
-    ;
+        display: flex;
         flex-flow: row wrap;
         min-width: 0;
     }

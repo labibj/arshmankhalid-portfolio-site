@@ -60,7 +60,7 @@
         padding: 0;
     }
     .expert-details {
-        background-color: rgb(163, 22, 87);
+        background: #56426B; background: radial-gradient(circle, rgba(86, 66, 107, 1) 0%, rgba(12, 9, 12, 1) 100%);
     }
 }
 
